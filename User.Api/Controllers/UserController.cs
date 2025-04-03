@@ -53,8 +53,7 @@ namespace User.Api.Controllers
             try
             {
                 var data = _getUser.Process(userName);
-                var user = JsonSerializer.Deserialize<UserDto>(data)
-
+                var user = JsonSerializer.Deserialize<UserDto>(data);
                 if (user is null)
                     return NotFound("No existe un usuario con esas credenciales...");
 
